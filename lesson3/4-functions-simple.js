@@ -42,6 +42,9 @@ getPrimesSumBelow(10); // 2 + 3 + 5 + 7 = 17
 //5
 
 function getNumber (a){
+    // лучше обьявить переменную тут
+    // var b
+    // потом в нее что то назначать 
     if (a%2===0){
        var b = false;
     } else {
