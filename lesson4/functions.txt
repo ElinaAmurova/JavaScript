@@ -1,0 +1,52 @@
+//1
+
+function getName (){
+    this.name = prompt("Как ваше имя?", '');
+}
+var obj = {};
+getName(obj);
+console.log (obj.name); // undefined
+getName(window);
+console.log (window.name); //создалась переменная
+
+
+//2
+
+function sumTo(n){
+    for (var i=n; i>0; i--){
+        n+=(i-1);
+    }
+    console.log(n);
+}
+sumTo(4);
+
+
+//3
+
+var vasya = { name: 'Вася', age: 23 };
+var masha = { name: 'Маша', age: 18 };
+var vovochka = { name: 'Вовочка', age: 6 };
+var people = [ vasya , masha , vovochka ];
+
+function compareNumbers(a, b) {
+    return a.age - b.age;
+}
+people.sort(compareNumbers);
+for(var i = 0; i < people.length; i++) {
+    push(people[i].name);
+    console.log(k);
+}
+console.log(people[0].age);
+
+
+//4
+
+function unique(arr) {
+    var obj1 = {};
+    for (var i = 0; i < arr.length; i++){
+        var str1 = arr[i];
+        obj1[str1] = true;
+    }
+    return Object.keys(obj1);
+}
+console.log(unique([1,'sdzfb',5,1,7]));
