@@ -49,3 +49,22 @@ function removeClass(objO, clsO){
 }
 console.log (removeClass(obj3, 'open'));
 //console.log (removeClass(obj3, 'blabla'));
+
+//4
+
+function sumOfNumbers() {
+    var arr4 = [];
+    while (true){
+        var yourNumber = prompt('Ведите число');
+        if ((yourNumber === null) || (yourNumber === '') || (isNaN(yourNumber))) break;
+        else {
+            arr4.push(yourNumber);
+            }
+        }
+    for (i=0; arr4.length; i++){
+        var a =0;
+        a += arr4[i];
+    }
+    console.log(a);
+}
+    sumOfNumbers();
