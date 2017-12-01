@@ -53,18 +53,18 @@ console.log (removeClass(obj3, 'open'));
 //4
 
 function sumOfNumbers() {
+    var a = 0;
     var arr4 = [];
     while (true){
         var yourNumber = prompt('Ведите число');
         if ((yourNumber === null) || (yourNumber === '') || (isNaN(yourNumber))) break;
         else {
             arr4.push(yourNumber);
-            }
         }
-    for (i=0; arr4.length; i++){
-        var a =0;
-        a += arr4[i];
+    }
+    for (var i=0; i < arr4.length; i++){
+        a += +arr4[i];
     }
     console.log(a);
 }
-    sumOfNumbers();
+sumOfNumbers();
