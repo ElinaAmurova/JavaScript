@@ -1,0 +1,51 @@
+//1
+
+nextPrime:
+    for (var i = 2; i <= 10; i++) {
+    for (j = 2; j < i; j++) {
+        if (i % j === 0) continue nextPrime;
+    }
+        console.log (i);
+}
+
+//2
+
+var obj = {
+    className: 'open menu'
+};
+function addClass (obj1, cls) {
+    var arr = obj1.className.split(' ');
+    //console.log(Array.isArray(arr));
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] === cls) {
+            break;
+        } else {
+            arr.push(cls);
+            break;
+        }
+    }
+    obj.className = arr.join(' ');
+    return obj.className;
+}
+
+console.log (addClass(obj, 'new')); // obj.className='open menu new'
+//console.log (addClass(obj, 'open')); // без изменений (класс уже существует)
+//console.log (addClass(obj, 'me')); // obj.className='open menu new me'
+
+//3
+
+var obj3 = {
+    className3: 'my open menu'
+};
+function removeClass(objO, clsO){
+    var arr3 = objO.className3.split(' ');
+    for (i = 0; i < arr3.length; i++) {
+        if (arr3[i] === clsO) {
+            delete  arr3[i];
+        }
+    }
+    obj3.className3 = arr3.join(' ');
+    return obj3.className3;
+}
+console.log (removeClass(obj3, 'open'));
+//console.log (removeClass(obj3, 'blabla'));
