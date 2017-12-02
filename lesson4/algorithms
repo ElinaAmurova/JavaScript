@@ -82,3 +82,10 @@ function fib(n) {
 }
 fib(7);
 
+//6
+
+function str20(str, maxlength) {
+    return (str.length > maxlength) ? str.slice(0,20) + '...' : str;
+}
+console.log(str20('Son las tres de la manana y no has llegado',20));
+
