@@ -1,0 +1,67 @@
+//1
+
+function isPal(string) {
+
+
+    var stringOriginal = string.toLowerCase().replace(/\s+/g,'');
+    var stringReverse = string.toLowerCase().split('').reverse().join('').replace(/\s+/g,'');
+
+    return (stringOriginal === stringReverse);
+}
+console.log(isPal('А роза упала на лапу Азора'));
+
+//2
+
+var arr2 = ['воз', 'киборг', 'корсет', 'ЗОВ', 'гробик', 'костер', 'сектор'];
+function anClean (arr) {
+    var obj2 = {};
+    var a = [];
+    for (var i = 0; i < arr.length; i++) {
+        var str2 = arr[i].toLowerCase().split('').sort().join('');
+        obj2[str2] = arr[i];
+    }
+    for (var key in obj2) {
+        a.push(obj2[key]);
+    }
+    console.log (a);
+}
+anClean(arr2);
+
+
+//3
+
+var arr3 = [ 'rrrA', 'toboR', 'ekiL', 'dooG', 'esoR' ];
+function change(arr) {
+    arr.reverse();
+    for (var i = 0; i < arr.length; i++){
+        arr[i] = arr[i].split('').reverse().join('');
+    }
+    console.log (arr);
+}
+change(arr3);
+
+
+//4.1 - сумма ЦЕЛЫХ чисел с шагом 1 (условие задачи не точное)
+
+function sumIntNumbers (x,y){
+    var sum = 0;
+    for (x; x < y; x++){
+        if (x - Math.floor(x) === 0) {
+            sum += x;
+        }
+    }
+    return sum;
+}
+console.log(sumIntNumbers (1,100));
+
+//4.2
+function sumEvenNumbers (x1,y1) {
+    var sum1 = 0;
+    for (x1; x1 < y1; x1++){
+        if (x1%2=== 0) {
+            sum1 += x1;
+        }
+    }
+    return sum1;
+}
+console.log(sumEvenNumbers (0,100));
