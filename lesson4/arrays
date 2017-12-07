@@ -182,3 +182,48 @@ function addToArray() {
 }
 console.log(arr);
 addToArray (arr);
+
+//9.1 вариант через цикл
+
+var array = [13, 35, 3, 443];
+
+function countSymbols (array, sym) {
+    var counter = 0;
+    array = array.join('').split('');
+    for (var i = 0; i < array.length; i++){
+        if (+array[i] === sym) {
+            counter++ ;
+        }
+    }
+    console.log('В массиве ' + counter + ' цифры ' + sym);
+}
+countSymbols (array, 3);
+
+
+//9.2
+
+var array = [13, 35, 3, 443];
+array = array.join('').split('');
+var positiveArr = array.filter(function(number) {
+    return (number == 3);
+});
+
+console.log('В массиве ' + positiveArr.length + ' цифры 3');
+
+
+//10
+
+var array = ['1', '2', '3', '4', '5', '6'];
+
+function makeSymbols (array) {
+
+    var makeArray = [];
+    for (var i = 0; i < (array.length/2); i++) {
+        makeArray.push(array[i] + array[array.length-i-1]);
+    }
+    return (makeArray.join('-'));
+}
+makeSymbols (array);
+
+
+
