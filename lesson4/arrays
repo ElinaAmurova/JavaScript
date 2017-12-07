@@ -112,3 +112,14 @@ function arrayForSum(quantity) {
  return arr;
 }
 callMe(3);
+
+//6
+
+function callMeAgain (arr) {
+   arr.sort(compareNumeric (arr));
+    return (arr.join(',').split(' '));
+}
+function compareNumeric(a, b) {
+    return a - b;
+}
+callMeAgain(['s','c','f','v','n','a','b','k','s']);
