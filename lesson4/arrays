@@ -65,3 +65,22 @@ function sumEvenNumbers (x1,y1) {
     return sum1;
 }
 console.log(sumEvenNumbers (0,100));
+
+//5
+
+function callMe() {
+        var yourNumber1 = prompt('Ведите число 1');
+        var yourNumber2 = prompt('Ведите число 2');
+        var yourNumber3 = prompt('Ведите число 3');
+        if ((isNaN(yourNumber1)) || (isNaN(yourNumber2)) || (isNaN(yourNumber3))||
+             (yourNumber1 === '')||(yourNumber2 === '')||(yourNumber3 === '') ||
+            (yourNumber1 === null) || (yourNumber2 === null)|| (yourNumber3 === null)) {
+            console.error("Ошибка! Нужно ввести 3 числа")
+        }
+        else {
+            var sum5 = +yourNumber1 + +yourNumber2 + +yourNumber3;
+        }
+    console.log(sum5);
+}
+callMe();
+
