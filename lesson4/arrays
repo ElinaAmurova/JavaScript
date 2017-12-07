@@ -66,7 +66,7 @@ function sumEvenNumbers (x1,y1) {
 }
 console.log(sumEvenNumbers (0,100));
 
-//5
+//5.1 по простому
 
 function callMe() {
         var yourNumber1 = prompt('Ведите число 1');
@@ -84,3 +84,31 @@ function callMe() {
 }
 callMe();
 
+//5.2 через функции
+
+function callMe(quantity) {
+    var arr = arrayForSum(quantity),
+        sum = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (isNumber(arr[i])){
+            sum += +arr[i];
+            if (i === arr.length - 1) {
+                console.log('Сумма чисел: ' + sum);
+            }
+        } else {
+            console.error ('Ошибка! Нужно ввести 3 числа');
+            break;
+        }
+    }
+}
+function isNumber(num) {
+    return !isNaN(parseFloat(num)) && isFinite(num);
+}
+function arrayForSum(quantity) {
+    var arr = [];
+    for (var i = 0; i < quantity; i++){
+       arr[i] = prompt('Введите ' + (i+1) + 'е' + ' число');
+    }
+ return arr;
+}
+callMe(3);
