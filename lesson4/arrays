@@ -143,4 +143,42 @@ function sortArray() {
 }
 sortArray(arr);
 
+//8
 
+var arr = [
+    {name: "L1", age: 45},
+    {name: "L2", age: 20},
+    {name: "L3", age: 10},
+    {name: "L4", age: 78},
+    {name: "L5", age: 41},
+    {name: "L6", age: 10}
+];
+function compareNumeric(a, b) {
+    return a.age - b.age;
+}
+function sortArray() {
+    arr.sort(compareNumeric);
+    return (arr);
+}
+
+function checkNewUserInList (newName) {
+    var nameIsPresentInList = false;
+    for (var i = 0; i < arr.length; i++) {
+        if (newName === arr[i].name) {
+            nameIsPresentInList = true;
+        }
+    }
+    return nameIsPresentInList;
+}
+function addToArray() {
+        var newName = prompt("Ведите имя пользователя"),
+            newAge = +prompt("Ведите возраст пользователя");
+        if (checkNewUserInList(newName)) {
+            console.log('User already exist');
+        } else {
+            arr.push ({name: newName, age: newAge});
+        }
+        arr.sort (sortArray);
+}
+console.log(arr);
+addToArray (arr);
