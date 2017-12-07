@@ -124,7 +124,7 @@ function compareNumeric(a, b) {
 }
 callMeAgain(['s','c','f','v','n','a','b','k','s']);
 
-//6
+//7
 
 var arr = [
     {name: "L1", age: 45},
