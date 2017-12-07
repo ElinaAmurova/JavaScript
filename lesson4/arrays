@@ -123,3 +123,24 @@ function compareNumeric(a, b) {
     return a - b;
 }
 callMeAgain(['s','c','f','v','n','a','b','k','s']);
+
+//6
+
+var arr = [
+    {name: "L1", age: 45},
+    {name: "L1", age: 20},
+    {name: "L1", age: 10},
+    {name: "L1", age: 78},
+    {name: "L1", age: 41},
+    {name: "L1", age: 10}
+];
+function compareNumeric(a, b) {
+    return a.age - b.age;
+}
+function sortArray() {
+    arr.sort(compareNumeric);
+    console.log(arr);
+}
+sortArray(arr);
+
+
