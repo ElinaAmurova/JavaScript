@@ -248,3 +248,17 @@ function sumOfArrays(array1, array2) {
 }
 sumOfArrays (array1, array2);
 
+//12
+
+var array = [1,2,3,4,3,3];
+
+function arraysWithoutSym (array, sym) {
+    for (var i = 0; i < array.length; i++) {
+        if (array [i] === sym) {
+            array.splice(i, 1);
+        }
+    }
+    return (array);
+}
+arraysWithoutSym (array, 3);
+
