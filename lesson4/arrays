@@ -292,3 +292,15 @@ function arrayMultiSymbol (array) {
         return (arrayAfter);
 }
 arrayMultiSymbol (array);
+
+//15
+
+var array = [1,2,3];
+
+function addZeroToArray (array, size) {
+    for (var i = (size - array.length); i < size; i++) {
+        array.push (0);
+    }
+    return (array);
+}
+addZeroToArray (array, 6);
