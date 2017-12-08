@@ -262,3 +262,18 @@ function arraysWithoutSym (array, sym) {
 }
 arraysWithoutSym (array, 3);
 
+//13
+
+var array1 = [1, 2, 3],
+    array2 = [101, 2, 1, 10],
+    array3 = [2, 1];
+function intersection (array1, array2, array3 ) {
+    var array = [];
+    for (var i = 0; i < array1.length; i++) {
+        if (((array2.indexOf(array1[i])) !== -1) && ((array3.indexOf(array1[i])) !== -1)) {
+            array.push(array1[i]);
+        }
+    }
+        return (array);
+}
+intersection (array1, array2, array3);
